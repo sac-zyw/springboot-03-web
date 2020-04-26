@@ -14,9 +14,10 @@ public class DepartmentDao {
     private static Map<Integer, Department> departmentMap = null;
 
     static {
-        departmentMap = new HashMap<Integer, Department>();//创建一个部门表
-        departmentMap.put(101, new Department(101, "教育部"));
-        departmentMap.put(102, new Department(102, "组织部"));
+        //创建一个部门表
+        departmentMap = new HashMap<Integer, Department>();
+        departmentMap.put(101, new Department(101, "后勤部"));
+        departmentMap.put(102, new Department(102, "体育部"));
         departmentMap.put(103, new Department(103, "宣传部"));
         departmentMap.put(104, new Department(104, "文艺部"));
         departmentMap.put(105, new Department(105, "广播部"));

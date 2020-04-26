@@ -2,13 +2,17 @@ package com.sac.dao;
 
 import com.sac.pojo.Department;
 import com.sac.pojo.Employee;
+import org.springframework.aop.aspectj.DeclareParentsAdvisor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import javax.xml.crypto.Data;
 import java.util.Collection;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+//员工dao层
 @Repository
 public class EmployeeDao {
     //模拟数据库中的数据
@@ -20,11 +24,11 @@ public class EmployeeDao {
 
     static {
         employeeMap = new HashMap<Integer, Employee>();//创建一个部门表
-        employeeMap.put(1001, new Employee(1001, "AA", "3920635541@qq.com", 1, new Department(101, "教育部")));
-        employeeMap.put(1002, new Employee(1002, "BB", "3945675441@qq.com", 0, new Department(102, "组织部")));
-        employeeMap.put(1003, new Employee(1003, "CC", "1267063541@qq.com", 1, new Department(103, "宣传部")));
-        employeeMap.put(1004, new Employee(1004, "DD", "3920635512@qq.com", 0, new Department(104, "文艺部")));
-        employeeMap.put(1005, new Employee(1005, "EE", "4567832541@qq.com", 1, new Department(105, "广播部")));
+        employeeMap.put(1001, new Employee(1001, "AA", "240293002@qq.com", 1, new Department(101, "后勤部")));
+        employeeMap.put(1002, new Employee(1002, "BB", "240s24402@qq.com", 0, new Department(102, "体育部")));
+        employeeMap.put(1003, new Employee(1003, "CC", "240293002@qq.com", 1, new Department(103, "宣传部")));
+        employeeMap.put(1004, new Employee(1004, "DD", "746781345@qq.com", 0, new Department(104, "文艺部")));
+        employeeMap.put(1005, new Employee(1005, "EE", "sfgwt3456@qq.com", 1, new Department(105, "广播部")));
     }
 
     //主键自增
@@ -45,12 +49,12 @@ public class EmployeeDao {
     }
 
     //通过id查询员工
-    public Employee getEmployeeById(Integer id){
+    public Employee getEmployeeById(Integer id) {
         return employeeMap.get(id);
     }
 
     //通过id删除员工
-    public Employee deleteEmployeeById(Integer id){
+    public Employee deleteEmployeeById(Integer id) {
         return employeeMap.remove(id);
     }
 }
